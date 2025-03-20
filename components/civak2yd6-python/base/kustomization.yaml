@@ -1,0 +1,12 @@
+apiVersion: kustomize.config.k8s.io/v1beta1
+kind: Kustomization
+commonLabels:         
+  argocd/app-name: civak2yd6-python
+  janus-idp.io/tekton: civak2yd6-python
+  backstage.io/kubernetes-id: civak2yd6-python
+  backstage.io/kubernetes-namespace: rhtap-app 
+  app.kubernetes.io/part-of: civak2yd6-python
+resources:
+  - deployment.yaml
+  - route.yaml
+  - service.yaml
